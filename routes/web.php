@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/copyan', function () {
+    return view('copyan.copy');
+});
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
+});
