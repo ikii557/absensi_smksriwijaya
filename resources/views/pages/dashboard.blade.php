@@ -15,7 +15,7 @@
             <h2>Selamat Datang Di Aplikasi SRIKARPU</h2>
             <p>silahkan klik foto untuk absen kehadiran</p>
             <div class="d-flex mt-4 justify-content-center justify-content-md-start">
-              <a href="#" class="download-btn"><i class="bi bi-camera-fill"></i> <span>Absen</span></a>
+              <a href="ambilkamera" class="download-btn"><i class="bi bi-camera-fill"></i> <span>Absen</span></a>
               <a href="#" class="download-btn"><i class="bi bi-bar-chart-line-fill"></i> <span>Data Absen</span></a>
             </div>
           </div>
@@ -452,8 +452,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Data Absen</h2>
+        <p>Data Absen terkini</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
@@ -462,17 +462,16 @@
 
           <div class="col-lg-4">
             <div class="pricing-item">
-              <h3>Free Plan</h3>
+              <h3>Absen Masuk</h3>
               <div class="icon">
                 <i class="bi bi-box"></i>
               </div>
-              <h4><sup>$</sup>0<span> / month</span></h4>
+              <h4>Pukul<p>19:00</p></h4>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <p><i class="bi bi-check"></i> NAMA: <span> Rifki Hadid Anwar</span></p>
+                <p><i class="bi bi-check"></i> KELAS :<span> Nec feugiat nisl pretium</span></p>
+                <p><i class="bi bi-check"></i> JURUSAN :<span> Desain Komunikasi Visual</span></p>
+                <p><i class="bi bi-check"></i> LOKASI :<span>Pharetra massa massa ultricies</span></p>
               </ul>
               <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
             </div>
@@ -480,36 +479,38 @@
 
           <div class="col-lg-4">
             <div class="pricing-item featured">
-              <h3>Business Plan</h3>
+              <h3>Data Diri</h3>
               <div class="icon">
                 <i class="bi bi-rocket"></i>
               </div>
 
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+              {{-- <h4><sup>$</sup>29<span> / month</span></h4> --}}
+              <span>
+                <td>nama</td>
+              </span>
+                <td>kelas</td>
+                <td>alamat</td>
+                <td>sekolah</td>
+                <td>jurusan</td>
+                <td>biodata</td>
+                <td class="btn btn-info">edit profile</td>
+              </span>
+              {{-- <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div> --}}
             </div>
           </div><!-- End Pricing Item -->
 
           <div class="col-lg-4">
             <div class="pricing-item">
-              <h3>Developer Plan</h3>
+              <h3>Absen Pulang</h3>
               <div class="icon">
                 <i class="bi bi-send"></i>
               </div>
-              <h4><sup>$</sup>49<span> / month</span></h4>
+              <h4>Pukul<p>19:00</p></h4>
               <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                <p><i class="bi bi-check"></i> NAMA: <span> Rifki Hadid Anwar</span></p>
+                <p><i class="bi bi-check"></i> KELAS :<span> Nec feugiat nisl pretium</span></p>
+                <p><i class="bi bi-check"></i> JURUSAN :<span> Desain Komunikasi Visual</span></p>
+                <p><i class="bi bi-check"></i> LOKASI :<span>Pharetra massa massa ultricies</span></p>
               </ul>
               <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
             </div>
