@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -13,20 +12,24 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
+     * Atribut yang bisa diisi (mass assignable).
      */
     protected $fillable = [
-        'name',
+        'nama_lengkap',
+        'nis',
+        'nisn',
+        'kelas',
+        'jurusan',
         'email',
         'password',
+        'opsi',
+        'sekolah',
+        'alamat',
+        'foto',
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
+     * Atribut yang disembunyikan saat serialisasi (misalnya API).
      */
     protected $hidden = [
         'password',
@@ -34,12 +37,26 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
+     * Atribut yang harus di-cast ke tipe tertentu.
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Relasi: User (guru) memiliki banyak absensi.
+     */
+    public function absensis()
+    {
+        return $this->hasMany(Absensi::class, 'guru_id');
+    }
+
+    /**
+     * Relasi: User bisa memiliki banyak izin absensi.
+     */
+    public function izinAbsens()
+    {
+        return $this->hasMany(Izinabsen::class);
+    }
 }

@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('absensis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('guru_id');
-            $table->string('foto'); // path foto
-            $table->timestamp('waktu_absen');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->string('foto')->nullable(); // path foto, nullable jika tidak wajib
+            $table->timestamp('waktu_absen')->useCurrent(); // default waktu saat ini
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
+            $table->enum('status', ['hadir', 'izin', 'sakit', 'alfa'])->default('hadir');
             $table->timestamps();
         });
     }
