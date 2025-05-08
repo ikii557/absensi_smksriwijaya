@@ -14,17 +14,25 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
-            $table->string('nis')->nullable()->unique();
-            $table->string('nisn')->nullable()->unique();
-            $table->enum('kelas', ['X', 'XI', 'XII']);
-            $table->enum('jurusan', ['dkv', 'akl', 'tkr']);
+
+            // Buat kolom nis, nisn, nip nullable tanpa unique agar bisa diisi sesuai tipe user
+            $table->string('nis')->nullable();
+            $table->string('nisn')->nullable();
+            $table->string('nip')->nullable(); // ← tambahkan kolom untuk guru
+
+            $table->enum('kelas', ['X', 'XI', 'XII'])->nullable(); // guru tidak punya kelas
+            $table->enum('jurusan', ['dkv', 'akl', 'tkr'])->nullable(); // guru bisa tidak isi jurusan
+
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
             $table->enum('opsi', ['guru', 'siswa']);
-            $table->string('sekolah')->unique();
+
+            $table->string('sekolah');
             $table->text('alamat')->nullable();
-            $table->string('foto')->nullable(); // ← kolom foto ditambahkan di sini
+            $table->string('foto')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
         });
