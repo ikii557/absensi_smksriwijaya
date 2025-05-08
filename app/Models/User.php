@@ -18,6 +18,7 @@ class User extends Authenticatable
         'nama_lengkap',
         'nis',
         'nisn',
+        'nip',
         'kelas',
         'jurusan',
         'email',

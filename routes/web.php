@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\GuruController;
+use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +30,12 @@ Route::get('/ambilkamera', function () {
 
 
 // data admin
+Route::get('/dashboardadmin',[UserController::class, 'index'])->name('dashboardadmin');
+
+Route::get('/dataadmin', [UserController::class, 'index']);
+
+
+
 Route::get('/dashboardadmin', function () {
     return view('pagesadmin.dashboard');
 });
@@ -35,6 +45,4 @@ Route::get('dokumentasiabsen', function () {
 Route::get('datasiswa', function () {
     return view('pagesadmin.data.datasiswa');
 });
-Route::get('dataguru', function () {
-    return view('pagesadmin.data.dataguru');
-});
+Route::get('dataguru',[GuruController::class, 'index'])->name('dataguru');
